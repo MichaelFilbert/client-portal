@@ -39,6 +39,10 @@ npm run dev        # port 3777 (pinned; check lsof before changing)
 3. No notifications when a client responds; no file attachments; no payments.
 4. Automated tests: `npm run qa` ([qa.mjs](qa.mjs)) covers HTTP + DB layers (auth tokens, XSS inertness, injection integrity, seed idempotency) — requires the dev server running. Not yet covered: full browser-click flows (Playwright), concurrent edits, rate limiting on portal tokens.
 
+## Repo
+
+GitHub: https://github.com/MichaelFilbert/client-portal (public, branch `main`, `origin` over HTTPS via gh CLI). `data/` and build caches are gitignored; never commit runtime state.
+
 ## Data
 
 Demo client "Maya Chen / Northwind Coffee Co." with portal token `4369d506f71a` is seeded automatically. `data/` is runtime state, not code — exclude it from git.
