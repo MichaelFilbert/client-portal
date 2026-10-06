@@ -45,4 +45,4 @@ GitHub: https://github.com/MichaelFilbert/client-portal (public, branch `main`, 
 
 ## Data
 
-Demo client "Maya Chen / Northwind Coffee Co." with portal token `4369d506f71a` is seeded automatically. `data/` is runtime state, not code — exclude it from git.
+Demo client "Maya Chen / Northwind Coffee Co." is seeded automatically. Portal tokens are random per seed (`crypto.randomBytes(6).toString("hex")`) — never hardcode one in docs or tests; read the live token from the dashboard or `SELECT token FROM clients`. `data/` is runtime state, not code — exclude it from git.
