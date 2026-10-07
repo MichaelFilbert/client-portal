@@ -14,6 +14,17 @@ Open http://localhost:3777 — demo data (Maya Chen @ Northwind Coffee Co.) is s
 - **Dashboard (`/`)** — add clients, projects, and deliverables; open each client's portal link.
 - **Client portal (`/portal/[token]`)** — what your client sees: approve deliverables or request changes with a note.
 
+## Dashboard login
+
+The dashboard is protected by HTTP Basic auth; the client portal stays public. Set credentials in `.env.local` (gitignored, loaded automatically by `npm run dev` and `npm run qa`):
+
+```
+DASHBOARD_USER=michael
+DASHBOARD_PASSWORD=<set your own>
+```
+
+Without `DASHBOARD_PASSWORD` the dashboard refuses every request (fail closed).
+
 ## Stack
 
 - Next.js 16 (App Router, server actions) + React 19

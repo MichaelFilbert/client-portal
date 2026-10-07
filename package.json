@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start -p 3777",
     "typecheck": "tsc --noEmit",
-    "qa": "node qa.mjs"
+    "qa": "node --env-file-if-exists=.env.local qa.mjs"
   },
   "dependencies": {
     "next": "^16.3.8",
